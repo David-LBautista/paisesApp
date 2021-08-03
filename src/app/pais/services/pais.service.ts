@@ -20,6 +20,11 @@ private apiurl:string = 'https://restcountries.eu/rest/v2';
     return this.http.get<Country[]>(url);
   }
 
+  buscarCapital(termino:string):Observable<Country[]>{
+    const url = `${this.apiurl}/capital/${termino}`;
+    return this.http.get<Country[]>(url);
+  }
+
 
 
 }
