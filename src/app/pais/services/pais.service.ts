@@ -25,6 +25,11 @@ private apiurl:string = 'https://restcountries.eu/rest/v2';
     return this.http.get<Country[]>(url);
   }
 
+  getPais(id:string):Observable<Country>{
+    const url = `${this.apiurl}/alpha/${id}`;
+    return this.http.get<Country>(url);
+  }
+
 
 
 }
