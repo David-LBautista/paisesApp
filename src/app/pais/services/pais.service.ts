@@ -30,6 +30,11 @@ private apiurl:string = 'https://restcountries.eu/rest/v2';
     return this.http.get<Country>(url);
   }
 
+  buscarRegion(region:string):Observable<Country[]>{
+    const url = `${this.apiurl}/region/${region}`;
+    return this.http.get<Country[]>(url);
+  }
+
 
 
 }
